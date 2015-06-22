@@ -1,0 +1,16 @@
+//
+//  UniversalFramework_Base.xcconfig
+//  Gaussian
+//
+//  Created by Vincent Esche on 6/10/15.
+//  Copyright (c) 2015 Vincent Esche. All rights reserved.
+//
+
+SUPPORTED_PLATFORMS                    = iphonesimulator iphoneos macosx
+VALID_ARCHS[sdk=macosx*]               = i386 x86_64
+VALID_ARCHS[sdk=iphoneos*]             = arm64 armv7 armv7s
+VALID_ARCHS[sdk=iphonesimulator*]      = arm64 armv7 armv7s
+
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]          = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]        = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'

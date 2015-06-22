@@ -1,0 +1,20 @@
+//
+//  UniversalFramework_Framework.xcconfig
+//  Gaussian
+//
+//  Created by Vincent Esche on 6/10/15.
+//  Copyright (c) 2015 Vincent Esche. All rights reserved.
+//
+
+#include "UniversalFramework_Base.xcconfig"
+
+FRAMEWORK_VERSION[sdk=macosx*]                = A
+COMBINE_HIDPI_IMAGES[sdk=macosx*]             = YES
+
+CODE_SIGN_IDENTITY[sdk=iphoneos*]             = iPhone Developer
+TARGETED_DEVICE_FAMILY[sdk=iphone*]           = 1,2
+TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]  = 1,2
+
+FRAMEWORK_SEARCH_PATHS[sdk=macosx*]          = $(inherited) '$(DEVELOPER_FRAMEWORKS_DIR)'
+FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]        = $(inherited) '$(SDKROOT)/System/Library/Frameworks'
+FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) '$(SDKROOT)/System/Library/Frameworks'
